@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home page</a>
+    </nav>
+    <h1>IO directly communicating with micro processor v/s using memory as interface</h1>
+    <h3>IO directly communicating with micro processor</h3>
+    <p>
+        If IO direclty communicates with the micro processor, than number of instructions or operations is reduced. Processor would send read signal and will be ready to direcly read data from the IO device through data bus. For write operation it can directly load bits to the data bus and send to the IO device.
+    </p>
+    <h3>IO using main memory as interface to communicate with the processor</h3>
+    <p>
+        Now the number of operation is increased. The processor goes into read mode and basically waits for IO to write its data to the main memory to certain location which processor also needs to know so it can read it from that address using data bus. Here processor would first need address bus to select the location and then data bus to read the data. Moreover microprocessor does read operation while IO does write, which indicates IO would need itself some sort of microcontroller with proper instruction sets. Also thier must be some synchronisation mechasim so processor doesnt read before IO writes to the memory, additonally thier has to be some way to tell the processor first from which location to read.
+        For writing data from processor to IO, the same will happen but roles would be reverserd.
+    </p>
+</body>
+</html>
