@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home page</a>
+    </nav>
+
+    <h1>Subnetting is done always in blocks</h1>
+    <p>If we have an ip 192.168.0.0/23 (255.255.254.0) means 192.168 is the network part and we can choose it to be anything in the range of ip we have been given by the ISP. But for the host part we can choose anything to be a starting ip! As soon the subnet field is not 255, the corresponding ip field starting is alwsys from 0 and follows like this. (/23 subnet means 512 hosts).</p>
+    <ul>
+        <li>192.168.0.0 - 192.168.1.255
+            <ol>
+                <li> hosts: 512</li>
+                <li> network id (start ip): 192.168.0.0 </li>
+                <li> broadcast ip (end ip): 192.168.1.255 </li>
+            </ol>
+        </li>
+        <li>192.168.2.0 - 192.168.3.255
+            <ol>
+                <li> hosts: 512</li>
+                <li> network id (start ip): 192.168.2.0 </li>
+                <li> broadcast ip (end ip): 192.168.3.255 </li>
+            </ol>
+        </li>
+        <li>192.168.4.0 - 192.168.5.255
+            <ol>
+                <li> hosts: 512</li>
+                <li> network id (start ip): 192.168.4.0 </li>
+                <li> broadcast ip (end ip): 192.168.5.255 </li>
+            </ol>
+        </li>
+        <li>192.168.6.0 - 192.168.7.255
+            <ol>
+                <li> hosts: 512</li>
+                <li> network id (start ip): 192.168.6.0 </li>
+                <li> broadcast ip (end ip): 192.168.7.255 </li>
+            </ol>
+        </li>
+        <li>etc</li>
+    </ul>
+    <p>Any ip like 192.168.1.23 can't suddenly be told to act as staring ip, it always falls under one these chunks of ip!</p>
+    <p>To know whether an ip from a particular subnet is the start/end/in between go to: <a href="https://www.ipaddressguide.com/cidr"> https://www.ipaddressguide.com/cidr </a></p>
+</body>
+</html>
